@@ -95,7 +95,7 @@ jQuery.noConflict()(function ($) {
   function mt_image_background() {
     /* Active Single Image Background  */
 
-    $(".image-box").backstretch("images/bg.jpg");
+    $(".image-box").backstretch("images/bg.webp");
 
     // ==== SLIDESHOW BACKGROUND ====
     // Set URLs to background images inside the array
