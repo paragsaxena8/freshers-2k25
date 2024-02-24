@@ -17,10 +17,17 @@
 /* :::::::::: 1. General ::::::::::: */
 /* ================================= */
 
+:root {
+  --font-family-main:  "Aubrey", system-ui;
+}
+
+* {
+  font-family: var(--font-family-main);
+}
 
 html,
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-main);
   margin: 0;
   padding: 0;
   width: 100%;
@@ -66,7 +73,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Aldrich", sans-serif;
+  font-family: var(--font-family-main);
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: none;
@@ -211,12 +218,11 @@ header .typed {
   color: #FFFFFF;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Aldrich", sans-serif;
+  font-family: var(--font-family-main);
   letter-spacing: 1px;
   position: relative;
   z-index: 2;
   margin-bottom: 8px;
-  padding-top: 1rem;
   line-height: normal;
 }
 
@@ -225,10 +231,18 @@ header .typed {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+
+.head-box {
+  position: relative;
+  z-index: 1;
+  color: #e7eaf0;
 }
 
 header .logo {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
@@ -272,7 +286,6 @@ header h3 {
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 30px;
-  font-family: 'Aldrich', sans-serif;
 }
 
 header h1 span {
@@ -432,18 +445,18 @@ header .image-box {
   height: 100vh;
   width: 100%;
   top: 0;
+  filter: brightness(0.75);
 }
 
 .countdown {
-  font-size: 3.7em;
-  line-height: 35px;
+  font-size: 5em;
+  line-height: 4rem;
   display: block;
   color: #FFF;
   font-weight: 700;
   float: left;
-  margin-left: -35px;
-  margin-top: 3rem;
-  font-family: 'Aldrich';
+  margin: 4rem 1rem;
+  font-family: var(--font-family-main);
   text-align: center;
   letter-spacing: 1px;
   position: relative;
@@ -1207,12 +1220,13 @@ header .image-box {
 
 footer {
   z-index: 10;
-  padding: 30px;
+  padding: 0.25rem 1rem;
   position: relative;
   color: #fff;
   background: #242830;
   text-align: center;
   overflow: hidden;
+  font-family: var(--font-family-main);
 }
 
 
@@ -1394,10 +1408,4 @@ footer a:focus {
   }
 
 
-}
-
-.head-box {
-  position: relative;
-  z-index: 1;
-  color: #e7eaf0;
 }

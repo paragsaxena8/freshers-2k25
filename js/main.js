@@ -15,7 +15,7 @@
 jQuery.noConflict()(function ($) {
   "use strict";
 
-  var isMobile = {
+  let isMobile = {
     Android: function () {
       return navigator.userAgent.match(/Android/i);
     },
@@ -113,9 +113,9 @@ jQuery.noConflict()(function ($) {
   /* ================================= */
 
   function mt_video_background() {
-    var myPlayer;
+    let myPlayer;
 
-    var options = {
+    let options = {
       // The path to the image used as background for the player if autoplay
       mobileFallbackImage: "images/youtube-poster.png",
       // Image used as fallback on mobile devices
@@ -131,7 +131,7 @@ jQuery.noConflict()(function ($) {
   /* ================================= */
 
   function mt_countdown() {
-    var endDate = "February 29, 2024 10:00:00";
+    let endDate = "February 29, 2024 09:30:00";
     $(".countdown").countdown({
       date: endDate,
       render: function (data) {
@@ -156,7 +156,7 @@ jQuery.noConflict()(function ($) {
 
   function mt_count() {
     $(".timer .number").appear(function () {
-      var counter = $(this).html();
+      let counter = $(this).html();
       $(this).countTo({
         from: 0,
         to: counter,
@@ -240,12 +240,12 @@ jQuery.noConflict()(function ($) {
         // JQuery's awesome submit handler.
         submitHandler: function (form) {
           // Create variables from the form
-          var name = $("input#name").val();
-          var email = $("input#email").val();
-          var msg = $("textarea#msg").val();
+          let name = $("input#name").val();
+          let email = $("input#email").val();
+          let msg = $("textarea#msg").val();
 
           // Create variables that will be sent in a URL string to contact.php
-          var dataString = "&name=" + name + "&email=" + email + "&msg=" + msg;
+          let dataString = "&name=" + name + "&email=" + email + "&msg=" + msg;
 
           $.ajax({
             type: "POST",
@@ -253,7 +253,7 @@ jQuery.noConflict()(function ($) {
             data: dataString,
             success: function (data) {
               if (data == "OK") {
-                var result =
+                let result =
                   '<div class="notification_ok"><i class="fa fa-check"></i> Your email was sent. Thanks!</div>';
                 $("#ajax-contact-form")
                   .find("input[type=text], input[type=email], textarea")
@@ -278,7 +278,7 @@ jQuery.noConflict()(function ($) {
   /* ================================= */
 
   function mt_wow() {
-    var wow = new WOW({
+    let wow = new WOW({
       mobile: false, // trigger animations on mobile devices (default is true)
     });
     wow.init();
@@ -290,24 +290,24 @@ jQuery.noConflict()(function ($) {
 
   function mt_google_map() {
     //set your google maps parameters
-    var latitude = -37.411699,
+    let latitude = -37.411699,
       longitude = 145.200563,
       map_zoom = 9;
 
     //google map custom marker icon - .png fallback for IE11
-    var is_internetExplorer11 =
+    let is_internetExplorer11 =
       navigator.userAgent.toLowerCase().indexOf("trident") > -1;
-    var marker_url = is_internetExplorer11
+    let marker_url = is_internetExplorer11
       ? "images/icon-location.png"
       : "images/icon-location.png";
 
     //define the basic color of your map, plus a value for saturation and brightness
-    var main_color = "#24B7A4",
+    let main_color = "#24B7A4",
       saturation_value = -20,
       brightness_value = 5;
 
     //we define here the style of the map
-    var style = [
+    let style = [
       {
         //set saturation for the labels on the map
         elementType: "labels",
@@ -456,7 +456,7 @@ jQuery.noConflict()(function ($) {
     ];
 
     //set google map options
-    var map_options = {
+    let map_options = {
       center: new google.maps.LatLng(latitude, longitude),
       zoom: map_zoom,
       panControl: false,
@@ -468,13 +468,13 @@ jQuery.noConflict()(function ($) {
       styles: style,
     };
     //inizialize the map
-    var map = new google.maps.Map(
+    let map = new google.maps.Map(
       document.getElementById("google-container"),
       map_options
     );
     //add a custom marker to the map
 
-    var marker = new google.maps.Marker({
+    let marker = new google.maps.Marker({
       position: new google.maps.LatLng(latitude, longitude),
       map: map,
       title: "Kinglake National Park",
@@ -484,7 +484,7 @@ jQuery.noConflict()(function ($) {
 
     // Resize window. Center marker
     google.maps.event.addDomListener(window, "resize", function () {
-      var center = map.getCenter();
+      let center = map.getCenter();
       google.maps.event.trigger(map, "resize");
       map.setCenter(center);
     });
@@ -492,7 +492,7 @@ jQuery.noConflict()(function ($) {
     //add custom buttons for the zoom-in/zoom-out on the map
     function CustomZoomControl(controlDiv, map) {
       //grap the zoom elements from the DOM and insert them in the map
-      var controlUIzoomIn = document.getElementById("zoom-in"),
+      let controlUIzoomIn = document.getElementById("zoom-in"),
         controlUIzoomOut = document.getElementById("zoom-out");
       controlDiv.appendChild(controlUIzoomIn);
       controlDiv.appendChild(controlUIzoomOut);
@@ -506,8 +506,8 @@ jQuery.noConflict()(function ($) {
       });
     }
 
-    var zoomControlDiv = document.createElement("div");
-    var zoomControl = new CustomZoomControl(zoomControlDiv, map);
+    let zoomControlDiv = document.createElement("div");
+    let zoomControl = new CustomZoomControl(zoomControlDiv, map);
 
     //insert the zoom div on the top left of the map
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
