@@ -1,11 +1,5 @@
 /*
-    Woody - Creative Coming Soon HTML5 Template
-    Version: 1.0.5
-    Author: Mountain-Themes
-    Author URL: https://themeforest.net/user/mountain-themes
-    Woody © 2023. Design & Coded by Mountain-Themes.
-
-    TABLE OF CONTENTS
+        TABLE OF CONTENTS
     ---------------------------
      1. General
      2. Header
@@ -36,7 +30,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
+  font-smooth: antialiased;
   text-rendering: optimizeLegibility;
 }
 
@@ -226,12 +220,19 @@ header .typed {
   line-height: normal;
 }
 
+.text-gradient {
+  background-image: linear-gradient(106.8deg, rgba(117, 255, 220, 1) 6%, rgba(163, 216, 255, 1) 47.6%, rgba(248, 215, 251, 1) 87.8%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 header .logo {
   margin-top: 4rem;
   margin-bottom: 30px;
   display: flex;
-  align-items:center;
-  justify-content:space-evenly;
+  align-items: center;
+  justify-content: space-evenly;
 
 }
 
@@ -666,6 +667,7 @@ header .image-box {
   display: block;
   font-size: 35px;
   float: left;
+  border-radius: 50%;
   -webkit-border-radius: 50%;
   border-bottom: none;
   color: #2cc9b4;
@@ -1250,9 +1252,7 @@ footer a:focus {
     margin-bottom: 15px;
   }
 
-  .mouse-wrapper {
-    display: none !important;
-  }
+
 
 }
 

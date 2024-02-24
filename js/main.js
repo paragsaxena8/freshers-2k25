@@ -1,10 +1,4 @@
 ﻿/*
-    Woody - Creative Coming Soon HTML5 Template
-    Version: 1.0.5
-    Author: Mountain-Themes
-    Author URL: https://themeforest.net/user/mountain-themes
-    Woody © 2023. Design & Coded by Mountain-Themes.
-
     TABLE OF CONTENTS
     ---------------------------
     1. Page Loader
@@ -61,10 +55,10 @@ jQuery.noConflict()(function ($) {
   mt_image_background();
   //mt_video_background();
   mt_countdown();
-  mt_count();
+  // mt_count();
   // mt_mailchimp();
   // mt_contact_form();
-  mt_wow();
+  // mt_wow();
   // mt_google_map();
 
   /* ================================= */
@@ -143,7 +137,7 @@ jQuery.noConflict()(function ($) {
       render: function (data) {
         $(this.el).html(
           "<div>" +
-            this.leadingZeros(data.days, 1) +
+            this.leadingZeros(data.days, 2) +
             " <span>days</span></div><div>" +
             this.leadingZeros(data.hours, 2) +
             " <span>hours</span></div><div>" +
