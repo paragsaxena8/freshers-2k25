@@ -89,7 +89,7 @@ jQuery.noConflict()(function ($) {
   function mt_image_background() {
     /* Active Single Image Background  */
 
-    $(".image-box").backstretch("images/bg.webp");
+    $(".image-box").backstretch("images/background.jpg");
 
     // ==== SLIDESHOW BACKGROUND ====
     // Set URLs to background images inside the array
@@ -131,7 +131,7 @@ jQuery.noConflict()(function ($) {
   /* ================================= */
 
   function mt_countdown() {
-    let endDate = "February 29, 2024 09:30:00";
+    let endDate = "February 23, 2025 08:30:00";
     $(".countdown").countdown({
       date: endDate,
       render: function (data) {
